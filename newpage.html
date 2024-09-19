@@ -15,17 +15,17 @@
           <div class="artboard artboard-demo phone-3">
             <div class="stats shadow">
                 <div class="stat">
-                  <div class="stat-value text-[20px]">$45000</div>
+                  <div class="stat-value text-[20px]">$<span id="balance">45000</span></div>
                   <div class="stat-desc font-semibold">Available Balance</div>
                 </div>
               </div>
               <div class="divider"></div>
             <div class="flex flex-row gap-5">
-            <button class="btn btn-lg">Add Money</button> 
-            <button class="btn btn-lg">Cashout</button> 
+            <button id="btnn-add-money" class="btn btn-lg">Add Money</button> 
+            <button id="btnn-cashout" class="btn btn-lg">Cashout</button> 
             </div>
             <div class="divider"></div>
-            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <div id="addMoney-id" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                 <form class="card-body">
                   <div class="form-control">
                     <label class="label">
@@ -44,10 +44,30 @@
                   </div>
                 </form>
               </div>
+            <div id="cashout-id" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text font-bold">Phone Number</span>
+                    </label>
+                    <input id="out-number" type="text" placeholder="Your phone number" class="input input-bordered rounded-2xl" required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text font-bold">4 Digit Pin</span>
+                    </label>
+                    <input id="out-pin-number" type="password" placeholder="Pin number" class="input input-bordered rounded-2xl" required />
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="Cashout-money-btn" class="btn btn-primary rounded-2xl">Cashout</button>
+                  </div>
+                </form>
+              </div>
           </div>
         </div>
       </div>
     </main>
     <script src="jS/newpage.js"></script>
+    <script src="jS/featuree.js"></script>
 </body>
 </html>
